@@ -4,6 +4,7 @@
  * It promises the result that will be retruned in future
  * That result will be passed to consuming code automatically
  * Javascript promise represent the eventual completion or failure of an asyncronous task
+ * Promise object acts as a link between producing code and consuming code
  */
 
 var promise1 = new Promise(function(resolve,reject){
