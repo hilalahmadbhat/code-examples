@@ -1,3 +1,4 @@
-<app-post-card title="Post 1" description="Description of post 1"></app-post-card>
-<app-post-card title="Post 2" description="Description of post 2"></app-post-card>
-<app-post-card title="Post 3" description="Description of post 3"></app-post-card>
+<app-post-card 
+    *ngFor="let post of blogPosts" 
+    [post]="post">
+</app-post-card>

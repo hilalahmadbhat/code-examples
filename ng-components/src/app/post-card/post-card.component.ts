@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { Post } from '../post';
 @Component({
   selector: 'app-post-card',
   templateUrl: './post-card.component.html',
@@ -7,8 +8,7 @@ import { Input } from '@angular/core';
 })
 export class PostCardComponent implements OnInit {
   
-  @Input() title:string;
-  @Input() description:string;
+  @Input() post: Post;
   constructor() { }
 
   ngOnInit(): void {
