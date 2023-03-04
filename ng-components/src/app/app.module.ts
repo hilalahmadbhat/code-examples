@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCardComponent,
     PostListComponent,
-    ViewPostComponent
+    ViewPostComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    TruncatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
