@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList,  ViewChildren } from '@angular/core';
 import { Post } from '../post';
+import { PostCardComponent } from '../post-card/post-card.component';
 
 @Component({
   selector: 'app-post-list',
@@ -10,6 +11,7 @@ export class PostListComponent implements OnInit {
 
   blogPosts: Post[][];
   currentPageNumber:number=0
+  @ViewChildren("postcards") blogPostCards:QueryList<PostCardComponent>
 
   constructor() { }
 
@@ -21,8 +23,8 @@ export class PostListComponent implements OnInit {
     // this.blogPosts.push(new Post(5,"Blog 5","Blog description 5"))
     this.blogPosts = [
       [
-        {id: 1,title: "Post title 1",description: "Post description 1"},
-        {id: 2,title: "Post title 2",description: "Post description 2"},
+        {id: 1,title: "Post title 1",description: "Post description 1 Post description 1 Post description 1 Post description 1 Post description 1"},
+        {id: 2,title: "Post title 2",description: "Post description 2 Post description 2 Post description 2 Post description 2 Post description 2 Post description 2 "},
         {id: 3,title: "Post title 3",description: "Post description 3"},
         {id: 4,title: "Post title 4",description: "Post description 4"},
         {id: 5,title: "Post title 5",description: "Post description 5"},
@@ -60,7 +62,9 @@ export class PostListComponent implements OnInit {
 
   updatePageNumber(event:any){
     this.currentPageNumber = event
-    // alert("from post list"+event)
   }
 
+  expandAllPosts(){
+    this.blogPostCards.forEach( e => e.showFullDescription())
+  }
 }

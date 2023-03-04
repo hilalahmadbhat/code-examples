@@ -12,7 +12,7 @@ export class PostCardComponent implements OnInit {
   @Input() post: Post;
   fullDescription:string;
   constructor(private truncatePipe: TruncatePipe) { 
-    console.log("*****constructor**********")
+    //console.log("*****constructor**********")
   }
 
   ngOnInit(): void {

@@ -2,7 +2,9 @@
     [numberOfPages]="blogPosts.length"
     (eventPageNumberClicked) = "updatePageNumber($event)"
     ></app-paginator>
-<app-post-card 
+<a href="#" (click)="expandAllPosts()">Expand All</a>    
+<app-post-card
+    #postcards
     *ngFor="let post of blogPosts[currentPageNumber]" 
     [post]="post">
 </app-post-card>
