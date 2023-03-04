@@ -24,4 +24,6 @@ export class PostCardComponent implements OnInit {
     this.post.description = this.fullDescription
   }
 
+  
+
 }

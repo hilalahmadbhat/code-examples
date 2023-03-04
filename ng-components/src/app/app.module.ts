@@ -7,6 +7,7 @@ import { PostCardComponent } from './post-card/post-card.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { TruncatePipe } from './truncate.pipe';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TruncatePipe } from './truncate.pipe';
     PostCardComponent,
     PostListComponent,
     ViewPostComponent,
-    TruncatePipe
+    TruncatePipe,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,

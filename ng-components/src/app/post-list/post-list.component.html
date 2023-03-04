@@ -1,4 +1,8 @@
+<app-paginator 
+    [numberOfPages]="blogPosts.length"
+    (eventPageNumberClicked) = "updatePageNumber($event)"
+    ></app-paginator>
 <app-post-card 
-    *ngFor="let post of blogPosts" 
+    *ngFor="let post of blogPosts[currentPageNumber]" 
     [post]="post">
 </app-post-card>
