@@ -8,6 +8,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     PostListComponent,
     ViewPostComponent,
     TruncatePipe,
-    PaginatorComponent
+    PaginatorComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
