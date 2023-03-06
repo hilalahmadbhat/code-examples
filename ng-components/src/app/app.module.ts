@@ -9,6 +9,7 @@ import { ViewPostComponent } from './view-post/view-post.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { HighlightDirective } from './highlight.directive';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HighlightDirective } from './highlight.directive';
     ViewPostComponent,
     TruncatePipe,
     PaginatorComponent,
-    HighlightDirective
+    HighlightDirective,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
