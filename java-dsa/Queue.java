@@ -20,35 +20,45 @@ public class Queue{
     }
 
     void enqueue(int data){
-        rear++;
-        this.queue[rear] = data; 
+        if(!isFull()){
+            this.rear++;
+            this.queue[rear] = data; 
+        }else{
+            System.out.println("queue is full");
+        }
+        
     }
 
     void dequeue(){
-        front++;
-        System.out.println(this.queue[front]);
+        if(!isEmpty()){
+            this.front++;
+            System.out.println(this.queue[front]);
+        }else{
+            System.out.println("queue is empty");
+        }
+        
     }
 
-    void isFull(){
-
+    boolean isFull(){
+        return this.rear>=this.size-1?true:false;
     }
 
-    void isEmpty(){
-
+    boolean isEmpty(){
+        return this.rear==-1?true:false;
     }
 
     public static void main(String[] args) {
         //System.out.println("hello world");
-        Queue q1 = new Queue(5);
+        Queue q1 = new Queue(3);
         q1.enqueue(1);
         q1.enqueue(2);
         q1.enqueue(3);
-        q1.enqueue(4);
+        //q1.enqueue(4);
         q1.dequeue();
         q1.dequeue();
         q1.dequeue();
-        q1.dequeue();
-        q1.dequeue();
+        //q1.dequeue();
+        //q1.dequeue();
         //q1.dequeue();
     }
 }
